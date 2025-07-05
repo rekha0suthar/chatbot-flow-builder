@@ -2,6 +2,8 @@
 
 A modern, visual chatbot flow builder built with React, TypeScript, and React Flow. Create interactive conversation flows by dragging and dropping message nodes and connecting them together.
 
+**Live Demo**- [Click here](https://chatbot-flow-builder-sage.vercel.app/)
+
 ## 🚀 Features
 
 ### Core Functionality
@@ -34,7 +36,7 @@ A modern, visual chatbot flow builder built with React, TypeScript, and React Fl
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/rekha0suthar/chatbot-flow-builder
    cd chatbot-flow-builder
    ```
 
