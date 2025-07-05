@@ -126,35 +126,7 @@ const FlowBuilder: React.FC = () => {
    * Add a new node connected to the currently selected node
    * Creates a new node to the right and connects it automatically
    */
-  const onAddNext = () => {
-    if (!selectedNode || !reactFlowInstance) return;
-    
-    // Position new node to the right of current node
-    const newPosition = {
-      x: (selectedNode.position?.x || 0) + 250,
-      y: selectedNode.position?.y || 0,
-    };
-    
-    // Create new node
-    const newNode: Node = {
-      id: `textNode_${+new Date()}`,
-      type: 'textNode',
-      position: newPosition,
-      data: { text: '' },
-    };
-    setNodes((nds) => nds.concat(newNode));
-    
-    // Connect current node to new node
-    const newEdge: Edge = {
-      id: `e_${selectedNode.id}_${newNode.id}`,
-      source: selectedNode.id,
-      target: newNode.id,
-    };
-    setEdges((eds) => eds.concat(newEdge));
-    
-    // Select the new node for editing
-    setSelectedNode(newNode);
-  };
+  
 
   /**
    * Navigate back to the nodes panel
