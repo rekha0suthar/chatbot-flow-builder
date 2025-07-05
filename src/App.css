@@ -12,9 +12,6 @@ body, html, #root {
   height: 64px;
   background: #fff;
   border-bottom: 1px solid #eee;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   position: fixed;
   top: 0;
   left: 0;
@@ -83,24 +80,6 @@ body, html, #root {
   z-index: 10;
 }
 
-/* ===== REACT FLOW CONTROLS STYLES ===== */
-.flow-controls {
-  bottom: 16px;
-  right: 16px;
-  left: auto;
-  top: auto;
-  z-index: 20;
-  position: absolute;
-}
-
-.flow-minimap {
-  bottom: 80px;
-  right: 16px;
-  left: auto;
-  top: auto;
-  z-index: 20;
-  position: absolute;
-}
 
 /* ===== NODES PANEL STYLES ===== */
 .nodes-panel {

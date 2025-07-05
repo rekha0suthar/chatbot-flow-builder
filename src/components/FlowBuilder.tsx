@@ -16,7 +16,7 @@ import NodesPanel from './NodesPanel';
 import SettingsPanel from './SettingsPanel';
 import SaveButton from './SaveButton';
 import { validateFlow } from '../utils/flowValidation';
-import './App.css';
+
 
 // Register custom node types for React Flow
 const nodeTypes = { textNode: TextNode };
@@ -181,7 +181,6 @@ const FlowBuilder: React.FC = () => {
     <>
       {/* Fixed navbar with title and save button */}
       <div className="navbar">
-        <div className="navbar-title">Chatbot Flow Builder</div>
         <SaveButton onClick={onSave} />
       </div>
       
@@ -215,8 +214,8 @@ const FlowBuilder: React.FC = () => {
             style={{ width: '100%', height: '100%' }}
           >
             {/* Flow controls and minimap positioned at bottom right */}
-            <MiniMap className="flow-minimap" />
-            <Controls className="flow-controls" />
+            <MiniMap />
+            <Controls />
             <Background />
           </ReactFlow>
         </div>
