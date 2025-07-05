@@ -1,0 +1,352 @@
+/* ===== GLOBAL STYLES ===== */
+body, html, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: sans-serif;
+}
+
+/* ===== NAVBAR STYLES ===== */
+.navbar {
+  width: 100vw;
+  height: 64px;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  padding: 0 32px;
+  box-sizing: border-box;
+}
+
+.navbar-title {
+  font-weight: 700;
+  font-size: 22px;
+  color: #1976d2;
+  letter-spacing: 1px;
+}
+
+/* ===== SAVE BUTTON STYLES ===== */
+.save-button {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  padding: 8px 20px;
+  font-size: 16px;
+  background: transparent;
+  color: #1976d2;
+  border: 1px solid #1976d2;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.save-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* ===== MAIN LAYOUT STYLES ===== */
+.main-container {
+  width: 100vw;
+  display: flex;
+}
+
+.flow-canvas-container {
+  flex: 1;
+  position: relative;
+  height: calc(100vh - 64px);
+  margin-top: 64px;
+  overflow: hidden;
+}
+
+.sidebar-panel {
+  width: 320px;
+  border-left: 1px solid #eee;
+  background: #ffffff;
+  margin-top: 64px;
+}
+
+/* ===== ERROR MESSAGE STYLES ===== */
+.error-message {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #ffcccc;
+  color: #900;
+  padding: 12px;
+  text-align: center;
+  z-index: 10;
+}
+
+/* ===== REACT FLOW CONTROLS STYLES ===== */
+.flow-controls {
+  bottom: 16px;
+  right: 16px;
+  left: auto;
+  top: auto;
+  z-index: 20;
+  position: absolute;
+}
+
+.flow-minimap {
+  bottom: 80px;
+  right: 16px;
+  left: auto;
+  top: auto;
+  z-index: 20;
+  position: absolute;
+}
+
+/* ===== NODES PANEL STYLES ===== */
+.nodes-panel {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.node-card {
+  border: 2px solid #1976d2;
+  border-radius: 12px;
+  padding: 10px 62px;
+  margin-bottom: 24px;
+  cursor: grab;
+  background: #fff;
+  box-shadow: 0 2px 8px #0001;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.2s, border 0.2s;
+}
+
+.node-card:hover {
+  box-shadow: 0 4px 16px #1976d233;
+}
+
+.node-label {
+  font-weight: 600;
+  font-size: 18px;
+  margin-top: 5px;
+  color: #1976d2;
+}
+
+/* ===== SETTINGS PANEL STYLES ===== */
+.settings-panel {
+  /* Container styles handled by component */
+}
+
+.settings-header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+  padding: 16px;
+  padding-bottom: 0;
+}
+
+.back-button {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  position: absolute;
+  left: 15px;
+  top: 65%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+
+.back-button:hover {
+  color: #1565c0;
+}
+
+.settings-title {
+  flex: 1;
+  text-align: center;
+  width: 100%;
+}
+
+.settings-title-text {
+  margin: 0;
+  font-size: 18px;
+  display: inline-block;
+}
+
+.settings-separator {
+  border: 1px solid #e8e8e8;
+  margin: 0;
+}
+
+.settings-content {
+  padding: 16px;
+}
+
+.settings-textarea {
+  width: 100%;
+  min-height: 60px;
+  margin-top: 8px;
+  border: 1px solid #eeeeee;
+  border-radius: 8px;
+  padding: 8px;
+  font-family: inherit;
+  resize: vertical;
+  box-sizing: border-box;
+}
+
+.settings-textarea:focus {
+  outline: none;
+  border-color: #1976d2;
+  box-shadow: 0 0 0 2px rgba(25, 118, 210, 0.2);
+}
+
+/* ===== TEXT NODE STYLES ===== */
+.text-node {
+  border: none;
+  border-radius: 5px;
+  background-color: #ffffff;
+  width: 280px;
+  box-shadow: 0 2px 8px #eee;
+  word-break: break-word;
+}
+
+.text-node.selected {
+  border: 1px solid blue;
+}
+
+.text-node-header {
+  background-color: aquamarine;
+  padding: 10px;
+  border-radius: 5px 5px 0px 0px;
+  font-size: 12px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.text-node-icon {
+  margin-right: 5px;
+}
+
+.text-node-title {
+  margin: 0;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.text-node-content {
+  padding: 10px 15px;
+  font-size: 10px;
+  min-height: 40px;
+}
+
+.text-node-placeholder {
+  color: #aaa;
+  font-style: italic;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+  .sidebar-panel {
+    width: 280px;
+  }
+  
+  .navbar {
+    padding: 0 16px;
+  }
+  
+  .navbar-title {
+    font-size: 18px;
+  }
+  
+  .node-card {
+    padding: 8px 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar-panel {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 50vh;
+    margin-top: 0;
+    z-index: 50;
+  }
+  
+  .flow-canvas-container {
+    height: 50vh;
+    margin-top: 64px;
+  }
+  
+  .main-container {
+    flex-direction: column;
+  }
+}
+
+/* ===== UTILITY CLASSES ===== */
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: block;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mt-16 {
+  margin-top: 16px;
+}
+
+.mb-16 {
+  margin-bottom: 16px;
+}
+
+.p-16 {
+  padding: 16px;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.slide-in {
+  animation: slideIn 0.3s ease-out;
+}
